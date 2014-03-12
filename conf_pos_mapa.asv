@@ -1,0 +1,18 @@
+function conf_pos_mapa(file_xls,mask)
+
+[dados,texto]=xlsread(file_xls);
+[l,c]=size(texto);
+if l>1
+    texto=texto(2:length(texto),1);
+end
+n=length(dados);
+dados=[[1:n]',dados];
+%a=[[1:n]',a(:,1) a(:,3) a(:,2)];
+b={'Taxon Name', 'Longitude', 'Latitude'};
+load(mask)
+pos=loc_gps_env(dados,minx,miny,cellsize,lin)
+for i=1:length(pos)
+    if pos(:,1)<
+    R(i,1)=D(pos(i,1),pos(i,2));
+end
+R
